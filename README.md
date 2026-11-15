@@ -1,13 +1,41 @@
-# Real-Time Face Recognition Based Attendance System Using Deep Facial Embeddings
+<div align="center">
 
-A webcam-based attendance system that recognises registered students in real time and records attendance automatically. It also checks liveness, so a printed photo or a face shown on a phone (including a live video call) can't be used for proxy attendance.
+# 🎓 FaceAttend
 
-> Computer Vision course project · B.Tech CSE, SRM Institute of Science and Technology, Kattankulathur
-> **Team:** Bollu Jnana Keerthana (RA2311003012009) · Shamil S (RA2311003012051)
+### Real-Time Face Recognition Based Attendance System
+
+**Face Detection → Alignment → Deep Embeddings → Matching → Liveness Check → Attendance Marked**
+
+![status](https://img.shields.io/badge/status-working-2ea44f)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-DNN-5C3EE8?logo=opencv&logoColor=white)
+![YuNet](https://img.shields.io/badge/YuNet-Face%20Detection-0D9488)
+![SFace](https://img.shields.io/badge/SFace-Face%20Recognition-0D9488)
+![YOLOX](https://img.shields.io/badge/YOLOX-Spoof%20Detection-E4572E)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-Excel%20Reports-150458?logo=pandas&logoColor=white)
+
+**Look at the camera. Get marked. No proxies.**
+
+*Computer Vision course project · B.Tech CSE, SRM Institute of Science and Technology, Kattankulathur*
+
+</div>
 
 ---
 
-## Features
+## 🎯 What is FaceAttend?
+
+FaceAttend is a webcam-based attendance system that recognises registered students in real time and writes their attendance automatically: no roll call, no signatures.
+
+Most face-attendance projects only check **who** the face is. FaceAttend also checks **whether it's a real person standing there**, so a printed photo, a photo on a phone, or a live video call can't be used for proxy attendance.
+
+- Runs on an ordinary laptop webcam, CPU only, with no GPU
+- Only numeric face embeddings are stored, never face photos
+- One-click setup on Windows
+
+---
+
+## ✨ Features
 
 - **Real-time face recognition** from a laptop webcam, CPU only, with no GPU needed
 - **Anti-spoofing**
@@ -20,7 +48,7 @@ A webcam-based attendance system that recognises registered students in real tim
 - **Reports**: one CSV per day, plus an Excel register showing P/A, totals and percentage
 - **Privacy**: only numeric face embeddings are stored, never face photos
 
-## How it works
+## 🧠 How it works
 
 | Step | Method | Purpose |
 |---|---|---|
@@ -34,11 +62,11 @@ A webcam-based attendance system that recognises registered students in real tim
 
 All models are pretrained and come from the [OpenCV Model Zoo](https://github.com/opencv/opencv_zoo).
 
-## Tech stack
+## 🛠️ Tech stack
 
 Python · OpenCV (DNN: YuNet, SFace, YOLOX) · NumPy · Streamlit · pandas · openpyxl
 
-## Setup (Windows)
+## ⚙️ Setup (Windows)
 
 1. Install **Python 3.10+** from [python.org](https://www.python.org/downloads/) and tick **"Add python.exe to PATH"**.
 2. Clone the repository:
@@ -59,7 +87,7 @@ python check_system.py
 streamlit run app.py
 ```
 
-## Usage
+## 🚀 Usage
 
 1. **Register Student**: enter the register number (`RA` + 13 digits) and name, then click **Start auto-capture**. Look at the camera and slowly turn your head until it reaches 30/30.
 2. **Take Attendance → Start live attendance**: look at the camera. Once you're recognised, turn your head left and right. The window shows **"NAME marked PRESENT"**. Press `q` to finish.
@@ -76,7 +104,7 @@ python attendance.py --image class.jpg
 python report.py
 ```
 
-## Project structure
+## 📁 Project structure
 
 ```
 ├── app.py              # Streamlit web interface
@@ -94,15 +122,25 @@ python report.py
 
 `models/`, `data/` (face embeddings) and `attendance/` (records) are created locally and are **not** in this repository.
 
-## Limitations
+## ⚠️ Limitations
 
 - A large monitor with its edges out of view can still fool an ordinary RGB webcam. Fully closing this gap needs depth or IR sensors (like Face ID).
 - Accuracy drops in poor or uneven lighting, with masks, and at strong side angles.
 - Data is stored in CSV files. A real deployment would use a database with access control.
 
-## References
+## 📚 References
 
 1. W. Wu, H. Peng, S. Yu, "YuNet: A Tiny Millisecond-level Face Detector," *Machine Intelligence Research*, 2023.
 2. Y. Zhong et al., "SFace: Sigmoid-Constrained Hypersphere Loss for Robust Face Recognition," *IEEE Trans. Image Processing*, 2021.
 3. Z. Ge et al., "YOLOX: Exceeding YOLO Series in 2021," arXiv:2107.08430, 2021.
 4. T.-Y. Lin et al., "Microsoft COCO: Common Objects in Context," ECCV, 2014.
+
+---
+
+## 👩‍💻 Author
+
+**Bollu Jnana Keerthana**
+B.Tech Computer Science and Engineering, SRM Institute of Science and Technology, Kattankulathur
+
+[![GitHub](https://img.shields.io/badge/GitHub-Jnana1964-181717?logo=github)](https://github.com/Jnana1964)
+[![Portfolio](https://img.shields.io/badge/Portfolio-jnana1964.github.io-0D9488)](https://jnana1964.github.io)
