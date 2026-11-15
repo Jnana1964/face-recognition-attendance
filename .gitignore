@@ -1,0 +1,18 @@
+# Python / environment
+venv/
+__pycache__/
+*.pyc
+
+# Downloaded models (re-created by: python download_models.py)
+models/
+
+# PRIVATE: students' face embeddings and attendance records - never publish
+data/
+attendance/
+attendance_report.xlsx
+*_result.jpg
+
+# Local backups / runtime files
+*.bak
+*.part
+.camera_in_use
